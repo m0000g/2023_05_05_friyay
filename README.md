@@ -16,6 +16,12 @@ Figma design: https://www.figma.com/file/8OFVI5yOlky4aDIq7NFGy4/Untitled?type=de
 3. Create an index.html file.
 4. Include react, react-dom and Babel libraries. I used this blog post: https://www.taniarascia.com/getting-started-with-react/
 5. Install and run Live Server.
+6. Insert a favicon.
+7. Create an link CSS file.
+8. Code the solution!
+
+Note:
+https://react.dev/blog/2022/03/08/react-18-upgrade-guide#updates-to-client-rendering-apis
 
 ## Live server instructions
 
