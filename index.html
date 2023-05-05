@@ -25,12 +25,11 @@
     <div id="root"></div>
     <script type="text/babel">
       const container = document.getElementById('root');
-      class App extends React.Component {
-        render() {
-          return <div className='container'></div>;
-        }
+      function MyApp() {
+        return <div className='container'></div>;
       }
-      ReactDOM.render(<App />, document.getElementById('root'));
+      const root = ReactDOM.createRoot(container);
+      root.render(<MyApp />);
     </script>
   </body>
 </html>
