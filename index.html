@@ -20,6 +20,8 @@
     ></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
   </head>
   <body>
     <div id="root"></div>
@@ -27,10 +29,48 @@
       const container = document.getElementById('root');
       function MyApp() {
         return (
-          <div className='container'>
-            <div class='card__medium'></div>
-            <div class='card__medium'></div>
-          </div>
+          <>
+            <div className='container'>
+              <div class='slider'>
+                <div className='slider_control'>
+                  <span className='slider_control_icon'>&lt;</span>
+                </div>
+                <div className='card_container'>
+                  <div className='card_medium'>
+                    <div className='card_medium_img'>
+                      <img
+                        src='/img/card_img_placeholder.png'
+                        alt='Empty gray square'
+                      />
+                    </div>
+                    <div className='card_medium_text'>
+                      <header>
+                        <h2>Search form</h2>
+                      </header>
+                      <p>Search from content and more</p>
+                    </div>
+                  </div>
+                  <div className='card_medium'>
+                    <div className='card_medium_img'>
+                      <img
+                        src='/img/card_img_placeholder.png'
+                        alt='Empty gray square'
+                      />
+                    </div>
+                    <div className='card_medium_text'>
+                      <header>
+                        <h2>Inside app</h2>
+                      </header>
+                      <p>Explore our career opportunities!</p>
+                    </div>
+                  </div>
+                </div>
+                <div className='slider_control'>
+                  <span className='slider_control_icon'>&gt;</span>
+                </div>
+              </div>
+            </div>
+          </>
         );
       }
       const root = ReactDOM.createRoot(container);

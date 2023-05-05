@@ -30,3 +30,7 @@ https://react.dev/blog/2022/03/08/react-18-upgrade-guide#updates-to-client-rende
 
 - Install live server `npm install live-server -g` (use sudo in Linux and Mac) -g means that it is installed globally.
 - Run the live server with the command `live-server`
+
+# Todo
+
+- CSS variables for colors.
