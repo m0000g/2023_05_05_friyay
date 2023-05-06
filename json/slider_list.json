@@ -1,0 +1,14 @@
+{
+  "cards": [
+    {
+      "image": "/img/card_img_placeholder.png",
+      "title": "Search form",
+      "caption": "Search from content and more"
+    },
+    {
+      "image": "/img/card_img_placeholder.png",
+      "title": "Inside app",
+      "caption": "Explore our career opportunities!"
+    }
+  ]
+}

@@ -27,11 +27,24 @@
     <div id="root"></div>
     <script type="text/babel">
       const container = document.getElementById('root');
+
       function MyApp() {
+        function getCards() {
+          const cards = fetch('./json/slider_list.json')
+            .then((response) => response.json())
+            .then((json) => {
+              console.log(json);
+              let cards = json.cards;
+              for (let i = 0; i < cards.length; i++) {
+                console.log(cards[i]);
+              }
+            });
+        }
+        getCards();
         return (
           <>
             <div className='container'>
-              <div class='slider'>
+              <div className='slider'>
                 <div className='slider_control'>
                   <div className='slider_control_icon left'>
                     <span className='slider_control_icon_left'>&lt;</span>
