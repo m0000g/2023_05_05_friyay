@@ -19,33 +19,32 @@ body {
 }
 
 .slider_control {
-  height: 56px;
-  width: 56px;
+  height: 37px;
+  width: 37px;
   background-color: hsl(299, 85%, 40%);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   gap: 0px;
-  /*align-items: center;*/
+  cursor: pointer;
 }
 
 .slider_control_icon_left,
 .slider_control_icon_right {
   color: #ffffff;
-  font-size: 60px;
-  line-height: 73px;
+  font-size: 38px;
+  line-height: 46px;
   font-weight: bold;
   position: relative;
-  top: -12px;
 }
 
 .slider_control_icon_left {
-  left: -2px;
+  /* left: -2px; */
 }
 
 .slider_control_icon_right {
-  right: -2px;
+  /* right: -2px; */
 }
 
 .card_container {
@@ -101,5 +100,25 @@ body {
     margin-top: 221px;
     display: flex;
     justify-content: center;
+  }
+
+  .slider_control {
+    height: 56px;
+    width: 56px;
+  }
+
+  .slider_control_icon_left,
+  .slider_control_icon_right {
+    font-size: 60px;
+    line-height: 73px;
+    top: -12px;
+  }
+
+  .slider_control_icon_left {
+    left: -2px;
+  }
+
+  .slider_control_icon_right {
+    right: -2px;
   }
 }
