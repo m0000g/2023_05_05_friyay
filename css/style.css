@@ -29,13 +29,22 @@ body {
   /*align-items: center;*/
 }
 
-.slider_control_icon {
+.slider_control_icon_left,
+.slider_control_icon_right {
   color: #ffffff;
   font-size: 60px;
   line-height: 73px;
   font-weight: bold;
   position: relative;
   top: -12px;
+}
+
+.slider_control_icon_left {
+  left: -2px;
+}
+
+.slider_control_icon_right {
+  right: -2px;
 }
 
 .card_container {
