@@ -27,16 +27,37 @@
     <div id="root"></div>
     <script type="text/javascript" src="js/slider_list.js"></script>
     <script type="text/babel">
-      console.log(typeof data);
-      const numbSlidesPerPage = 2;
-      const numberOfSlides = Object.entries(data).length;
-      const numberOfPages = Math.ceil(numberOfSlides / numbSlidesPerPage);
-      console.log(numberOfSlides);
-      console.log(numberOfPages);
+      const detectDeviceType = () =>
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent
+        )
+          ? '1'
+          : '2';
       const container = document.getElementById('root');
+      const numbSlidesPerPage = detectDeviceType();
+      const sliders = Object.entries(data);
+      const numberOfSlides = sliders.length;
+      const numberOfPages = Math.ceil(numberOfSlides / numbSlidesPerPage);
+      const currentPage = 1;
+      console.log(sliders);
+      console.log(`Number of Slides: ${numberOfSlides}`);
+      console.log(`Number of Sliders per page: ${numbSlidesPerPage}`);
+      console.log(`Number of pages: ${numberOfPages}`);
+
       const listItemsPagination = [...Array(numberOfPages)].map((e, i) => (
-        <span className='dot' key={i}></span>
+        <span className={`dot ${i}`} key={i}></span>
       ));
+
+      function buildPage(current, slidersPerPage, cardsSliders) {
+        const trimStart = (current - 1) * slidersPerPage;
+        const trimEnd = trimStart + slidersPerPage;
+        console.log(cardsSliders);
+        const trimmedCardsSliders = cardsSliders.slice(trimStart, trimEnd);
+        console.log(trimmedCardsSliders);
+      }
+
+      buildPage(currentPage, numbSlidesPerPage, sliders);
+
       const listItems = data.map((slide) => (
         <div className='card_medium' key={slide.id}>
           <div className='card_medium_img'>
@@ -50,6 +71,7 @@
           </div>
         </div>
       ));
+
       function MyApp() {
         return (
           <>
