@@ -27,9 +27,15 @@
     <div id="root"></div>
     <script type="text/javascript" src="js/slider_list.js"></script>
     <script type="text/babel">
+      console.log(typeof data);
+      const numbSlidesPerPage = 2;
+      const numberOfSlides = Object.entries(data).length;
+      const numberOfPages = Math.ceil(numberOfSlides / numbSlidesPerPage);
+      console.log(numberOfSlides);
+      console.log(numberOfPages);
       const container = document.getElementById('root');
-      const listItemsPagination = data.map((dot) => (
-        <span className='dot'></span>
+      const listItemsPagination = [...Array(numberOfPages)].map((e, i) => (
+        <span className='dot' key={i}></span>
       ));
       const listItems = data.map((slide) => (
         <div className='card_medium' key={slide.id}>

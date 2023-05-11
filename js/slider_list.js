@@ -11,4 +11,10 @@ const data = [
     title: 'Inside app',
     caption: 'Explore our career opportunities!',
   },
+  {
+    id: 2,
+    image: '/img/card_img_placeholder.png',
+    title: 'Inside app Test',
+    caption: 'Explore our Test!',
+  },
 ];
