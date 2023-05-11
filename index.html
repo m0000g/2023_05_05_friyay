@@ -25,22 +25,23 @@
   </head>
   <body>
     <div id="root"></div>
+    <script type="text/javascript" src="js/slider_list.js"></script>
     <script type="text/babel">
       const container = document.getElementById('root');
-
+      const listItems = data.map((slide) => (
+        <div className='card_medium' key={slide.id}>
+          <div className='card_medium_img'>
+            <img src={slide.image} alt='Empty gray square' />
+          </div>
+          <div className='card_medium_text'>
+            <header>
+              <h2>{slide.title}</h2>
+            </header>
+            <p>{slide.caption}</p>
+          </div>
+        </div>
+      ));
       function MyApp() {
-        function getCards() {
-          const cards = fetch('./json/slider_list.json')
-            .then((response) => response.json())
-            .then((json) => {
-              console.log(json);
-              let cards = json.cards;
-              for (let i = 0; i < cards.length; i++) {
-                console.log(cards[i]);
-              }
-            });
-        }
-        getCards();
         return (
           <>
             <div className='container'>
@@ -50,36 +51,7 @@
                     <span className='slider_control_icon_left'>&lt;</span>
                   </div>
                 </div>
-                <div className='card_container'>
-                  <div className='card_medium'>
-                    <div className='card_medium_img'>
-                      <img
-                        src='/img/card_img_placeholder.png'
-                        alt='Empty gray square'
-                      />
-                    </div>
-                    <div className='card_medium_text'>
-                      <header>
-                        <h2>Search form</h2>
-                      </header>
-                      <p>Search from content and more</p>
-                    </div>
-                  </div>
-                  <div className='card_medium'>
-                    <div className='card_medium_img'>
-                      <img
-                        src='/img/card_img_placeholder.png'
-                        alt='Empty gray square'
-                      />
-                    </div>
-                    <div className='card_medium_text'>
-                      <header>
-                        <h2>Inside app</h2>
-                      </header>
-                      <p>Explore our career opportunities!</p>
-                    </div>
-                  </div>
-                </div>
+                {listItems}
                 <div className='slider_control'>
                   <div className='slider_control_icon'>
                     <span className='slider_control_icon_right'>&gt;</span>
@@ -87,6 +59,7 @@
                 </div>
               </div>
             </div>
+            <br />
           </>
         );
       }

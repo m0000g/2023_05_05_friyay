@@ -18,6 +18,11 @@ body {
   align-items: center;
 }
 
+.slider li {
+  list-style: none;
+  display: block;
+}
+
 .slider_control {
   height: 37px;
   width: 37px;
