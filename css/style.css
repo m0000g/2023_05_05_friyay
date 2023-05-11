@@ -98,6 +98,25 @@ body {
   padding: 0;
 }
 
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+  gap: 6px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot__selected {
+  background-color: #b80fbb;
+}
+
 /* Media Query*/
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {

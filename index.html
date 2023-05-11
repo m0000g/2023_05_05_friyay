@@ -28,6 +28,9 @@
     <script type="text/javascript" src="js/slider_list.js"></script>
     <script type="text/babel">
       const container = document.getElementById('root');
+      const listItemsPagination = data.map((dot) => (
+        <span className='dot'></span>
+      ));
       const listItems = data.map((slide) => (
         <div className='card_medium' key={slide.id}>
           <div className='card_medium_img'>
@@ -59,7 +62,7 @@
                 </div>
               </div>
             </div>
-            <br />
+            <div className='pagination'>{listItemsPagination}</div>
           </>
         );
       }
